@@ -1,0 +1,22 @@
+version: "3"
+services:
+  web:
+      container_name: 'web'
+      image: 'ranjith9/company-web:v1'
+      ports:
+        - "9001:80"
+  app:
+      container_name: 'app'
+      image: 'tomcat'
+      volumes:
+        - "./companyNews.war:/usr/local/tomcat/webapps/companyNews.war"
+      ports:
+        - "8080:8080"
+  company:
+      container_name: 'company'
+      image: 'ranjith9/company:https'
+      ports:
+        - "443:443"
+      depends_on:
+        - 'web'
+        - 'app'      
