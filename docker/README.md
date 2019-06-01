@@ -11,7 +11,7 @@ The Dockerfiles in these folders are responsible to create the docker images for
 The Java application can run on docker by running the following command in the same directory.
 
 ```bash
-    docker-compose up
+  $  docker-compose up
 ```
 
-But for this scenario I'm using terraform and docker swarm and the terraform scripts can be found here.
+But for this scenario I'm using terraform and docker swarm and the terraform scripts can be found [here](https://github.com/Ranjith9/thought-docker/tree/master/terraform).
